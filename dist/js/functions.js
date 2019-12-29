@@ -26,16 +26,36 @@ snap.addEventListener('click', function () {
 
     context.setTransform(1, 0, 0, 1, 0, 0);
     var img = new Image();
+    var imagesArray = [];
     img.src = base64dataUrl;
-    var new_img = document.createElement('img');
-    var new_href = document.createElement('a');
-    new_href.className = "href__photo";
-    new_href.setAttribute('download','download');
-    new_href.href = img.src;
-    new_img.className = "snap__photo";
-    new_img.src = img.src;
-    document.querySelector('.images__container').appendChild(new_href);
-    document.querySelector('.href__photo').appendChild(new_img);
+    imagesArray.push(img.src);
 
-    console.log(img);
+
+    for (var i = 0; i < imagesArray.length; i++) {
+
+
+        var itemImage = document.createElement('span');
+        itemImage.className = "item__image";
+
+        var linkImage = document.createElement('a');
+        linkImage.className = "href__image";
+        linkImage.innerText = 'Download';
+        linkImage.href = imagesArray[i];
+
+
+        var image = document.createElement('img');
+        image.className = "snap__photo";
+        image.src = imagesArray[i];
+        document.querySelector('.images__container').appendChild(itemImage);
+        document.querySelectorAll('.item__image').forEach(function (item) {
+            item.appendChild(image);
+            item.appendChild(linkImage);
+        });
+    }
+
+    ;
+
+
 });
+
+

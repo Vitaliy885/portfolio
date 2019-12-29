@@ -5,6 +5,8 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <link href="images/Iconsmind-Outline-Selfie.ico" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Take a Selfie With JavaScript</title>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;subset=latin,cyrillic-ext"
@@ -14,12 +16,16 @@
 </head>
 <body>
 
-
+<div class="overlay"></div>
+<div class="modal__box">
+    <img src="" class="modal__image" alt="">
+</div>
 <div class="video__container">
     <span class="video__title">Take a photo</span>
     <video id="video"></video>
     <button id="snap">Snap Photo</button>
     <div class="images__container">
+
     </div>
     <canvas id="canvas" width="640" height="480"></canvas>
 </div>
