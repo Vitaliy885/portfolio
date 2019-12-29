@@ -2,6 +2,11 @@ var video = document.getElementById('video');
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
 var snap = document.getElementById('snap');
+var overlay = document.querySelector('.overlay');
+var modal = document.querySelector('.modal__box');
+var modalImage = document.querySelector('.modal__image');
+var closeModal = document.querySelector('.close__modal');
+
 
 video.style.width = document.width + 'px';
 video.style.height = document.height + 'px';
@@ -55,7 +60,28 @@ snap.addEventListener('click', function () {
 
     ;
 
+    document.querySelectorAll('.item__image').forEach(function (photo) {
+        photo.addEventListener('click', function () {
+            modalImage.src = this.firstElementChild.src;
+            overlay.classList.add('active');
+            modal.classList.add('active');
+            closeModal.classList.add('active');
+        });
+    });
+
+    overlay.addEventListener('click', function () {
+        overlay.classList.remove('active');
+        modal.classList.remove('active');
+        closeModal.classList.remove('active');
+    });
+
+    closeModal.addEventListener('click', function () {
+        overlay.classList.remove('active');
+        modal.classList.remove('active');
+        closeModal.classList.remove('active');
+    });
 
 });
+
 
 
