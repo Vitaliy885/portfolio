@@ -48,6 +48,7 @@ snap.addEventListener('click', function () {
         var linkImage = document.createElement('a');
         linkImage.className = "href__image";
         linkImage.innerText = 'Download';
+        linkImage.setAttribute('Download', 'Download');
         linkImage.href = imagesArray[i];
 
 
