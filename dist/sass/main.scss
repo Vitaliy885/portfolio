@@ -160,6 +160,47 @@ body {
     font-family: 'Open Sans', sans-serif;
   }
 
+  .remove__image {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    color: #000000;
+    right: -13px;
+    top: -15px;
+    box-shadow: 0 0 3px #dddddd;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      display: block;
+      position: relative;
+      transition: right .3s;
+      transform: rotate(-45deg);
+      width: 15px;
+      height: 1px;
+      top: 50%;
+      right: -3px;
+      background-color: #dddddd;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: relative;
+      transition: right .3s;
+      transform: rotate(45deg);
+      width: 15px;
+      height: 1px;
+      top: 45%;
+      right: -2px;
+      background-color: #dddddd;
+    }
+  }
+
   .snap__photo {
     max-width: 130px;
   }

@@ -42,6 +42,9 @@ snap.addEventListener('click', function () {
         var itemImage = document.createElement('span');
         itemImage.className = "item__image";
 
+        var removeImage = document.createElement('span');
+        removeImage.className = "remove__image";
+
         var linkImage = document.createElement('a');
         linkImage.className = "href__image";
         linkImage.innerText = 'Download';
@@ -55,17 +58,24 @@ snap.addEventListener('click', function () {
         document.querySelectorAll('.item__image').forEach(function (item) {
             item.appendChild(image);
             item.appendChild(linkImage);
+            item.appendChild(removeImage);
         });
     }
 
     ;
 
     document.querySelectorAll('.item__image').forEach(function (photo) {
-        photo.addEventListener('click', function () {
-            modalImage.src = this.firstElementChild.src;
+        photo.firstElementChild.addEventListener('click', function () {
+            modalImage.src = this.src;
             overlay.classList.add('active');
             modal.classList.add('active');
             closeModal.classList.add('active');
+        });
+    });
+
+    document.querySelectorAll('.remove__image').forEach(function (removeImg) {
+        removeImg.addEventListener('click', function () {
+            this.parentElement.style.display = 'none';
         });
     });
 
