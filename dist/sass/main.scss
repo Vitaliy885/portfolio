@@ -356,6 +356,10 @@ body {
   &__container {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
   }
 
   &__svg {
@@ -368,47 +372,87 @@ body {
   &__link {
     position: fixed;
     z-index: 1;
-    left: -95px;
     background-color: #ffffff;
     border: 1px solid #eeddee;
     border-radius: 4px;
     width: 150px;
+    left: -10000px;
     height: 50px;
     display: flex;
     padding-left: 10px;
     justify-content: normal;
     align-items: center;
-    transition: left 0.2s ease-in-out;
     font-size: 14px;
     color: #cccccc;
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
+    transition: max-width 2s ease-in-out;
+    max-width: 0;
+
+    &.loaded {
+      left: unset;
+      max-width: 100%;
+    }
+
+    &:hover {
+      border: 1px solid #9ae5f5;
+    }
+
+
+    &:hover .nav__link-text {
+      border-bottom: 1px dotted #000000;
+      color: #000000;
+    }
 
     &:nth-child(0) {
       top: 70px;
     }
 
     &:nth-child(1) {
-      top: 140px;
+      top: -50px;
     }
+
     &:nth-child(2) {
-      top: 70px;
+      top: -150px;
+      right: -35px;
     }
+
     &:nth-child(3) {
-      top: 200px;
+      top: 50px;
+      right: -230px;
     }
+
     &:nth-child(4) {
-      top: 260px;
+      top: 150px;
     }
+
     &:nth-child(5) {
-      top: 325px;
+      top: 250px;
+      right: -230px;
     }
+
     &:nth-child(6) {
-      top: 390px;
+      top: 350px;
     }
-    &:hover {
-      left: 0;
-    }
+
+  }
+}
+
+.logo {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+
+  &__cover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+
   }
 }
 

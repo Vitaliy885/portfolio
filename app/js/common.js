@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){var n=document.querySelectorAll(".nav__link");setTimeout(function(){for(var e=0;e<n.length;e++)n[e].classList.add("loaded")},300)});
