@@ -19,6 +19,5 @@ function myFunction(arr) {
     document.querySelector('.question__list').innerHTML = out;
 }
 
-}
 
 
