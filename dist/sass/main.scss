@@ -359,13 +359,12 @@ body {
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 9999;
   }
 
   &__svg {
     position: absolute;
     right: 10px;
-    max-width: 35px;
+    max-width: 30px;
     fill: black;
   }
 
@@ -394,10 +393,6 @@ body {
       max-width: 100%;
     }
 
-    &:hover {
-      border: 1px solid #9ae5f5;
-    }
-
 
     &:hover .nav__link-text {
       border-bottom: 1px dotted #000000;
@@ -410,29 +405,32 @@ body {
 
     &:nth-child(1) {
       top: -50px;
+      left: 275px;
     }
 
     &:nth-child(2) {
       top: -150px;
-      right: -35px;
+      right: -95px;
     }
 
     &:nth-child(3) {
       top: 50px;
-      right: -230px;
+      right: -275px;
     }
 
     &:nth-child(4) {
       top: 150px;
+      left: 300px;
     }
 
     &:nth-child(5) {
       top: 250px;
-      right: -230px;
+      right: -275px;
     }
 
     &:nth-child(6) {
       top: 350px;
+      left: 300px;
     }
 
   }
@@ -452,7 +450,15 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 50%;
+  }
 
+  &-text {
+    position: absolute;
+    top: 50%;
+    left: -300px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
   }
 }
 
