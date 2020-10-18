@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",function(){var n=document.querySelectorAll(".nav__link");setTimeout(function(){for(var e=0;e<n.length;e++)n[e].classList.add("loaded")},300)});
+document.addEventListener("DOMContentLoaded",function(){var t=document.querySelectorAll(".nav__link");setTimeout(function(){for(var e=0;e<t.length;e++)t[e].classList.add("loaded")},300)}),/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)?document.write("mobile device"):document.write("not mobile device");

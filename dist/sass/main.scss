@@ -350,6 +350,27 @@ body {
   }
 }
 
+.out_of_order {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#ddd, 0.7);
+
+  .out_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    font-weight: 600;
+  }
+}
 
 .nav {
 
@@ -387,12 +408,17 @@ body {
     font-family: 'Open Sans', sans-serif;
     transition: max-width 2s ease-in-out;
     max-width: 0;
+    opacity: 0;
 
     &.loaded {
       left: unset;
       max-width: 100%;
+      opacity: 1;
     }
 
+    &-text {
+      white-space: nowrap;
+    }
 
     &:hover .nav__link-text {
       border-bottom: 1px dotted #000000;
